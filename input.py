@@ -6,7 +6,6 @@ import time
 
 timestamp = datetime.datetime.now()
 timestamp = timestamp.strftime('%a %x %X').replace('/','.')
-
 fileDirectory = '/Users/mica/Projects/PDB/Files/'
 fileName = timestamp
 
@@ -31,5 +30,5 @@ with open(database,'r') as f:
 with open(database, 'w') as f:
     json.dump(data, f, indent=2) 
 
-
+import encrypt.py
 
