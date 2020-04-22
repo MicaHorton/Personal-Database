@@ -66,8 +66,6 @@ for file in filePaths:
     with open(file, 'wb') as f:
         f.write(b'Encrypted'+ b'\n')
         f.write(token)
-
-
     
 
 # https://stackoverflow.com/questions/2572099/pythons-safest-method-to-store-and-retrieve-passwords-from-a-database
