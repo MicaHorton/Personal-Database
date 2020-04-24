@@ -22,7 +22,7 @@ This will create a file structure like this:
 
 
 
-The code is kept in a seperate folder from "Files" and "database.json" to make difficult to acidentally upload those to Github by accident since those are used to store your thoughts. 
+The code is kept in a seperate folder from "Files" and "database.json" to make difficult to acidentally upload those to Github since those are used to store your thoughts. 
 
 
 
