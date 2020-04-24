@@ -16,9 +16,9 @@ mkdir('PDB')
 ```
 This will create a file structure like this:
 PDB
-    Code
-    Files
-    database.json
+- Code
+- Files
+- database.json
 
 The code is kept in a seperate folder from "Files" and "database.json" to make difficult to acidentally upload those to Github by accident since those are used to store your thoughts. 
 
