@@ -7,7 +7,7 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import json 
 
 # Open database file & get all file paths
-database = '/Users/mica/Projects/PDB/dataBase.json'
+database = os.path.realpath(__file__).replace('Code/decrypt.py','database.json')
 filePaths = []
 with open(database,'r') as f:
     data = json.load(f)
@@ -40,9 +40,7 @@ for file in filePaths:
     # Check to see if file is encrypted
     with open(file,'rb') as f:
         header = f.readline()
-        print(header)
         if not b'Encrypted' in header:
-            print('Already decrypted')
             continue
         data = f.read()
 

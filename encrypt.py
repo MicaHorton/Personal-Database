@@ -7,7 +7,7 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import json 
 
 # Open database file & get all file paths
-database = '/Users/mica/Projects/PDB/dataBase.json'
+database = os.path.realpath(__file__).replace('Code/encrypt.py','database.json')
 filePaths = []
 with open(database,'r') as f:
     data = json.load(f)
@@ -41,7 +41,6 @@ for file in filePaths:
     with open(file,'rb') as f:
         header = f.readline()
         if b'Encrypted' in header:
-            print('Already encrypted')
             continue
         data = header + f.read()
 
@@ -60,14 +59,7 @@ for file in filePaths:
     fernet = Fernet(key) #Turn key into a fernet object for symmetric (ie. fernet) encryption
     token = fernet.encrypt(data)
 
-    #message = fernet.decrypt(token)
-    #print(message)
-
     with open(file, 'wb') as f:
         f.write(b'Encrypted'+ b'\n')
         f.write(token)
     
-
-# https://stackoverflow.com/questions/2572099/pythons-safest-method-to-store-and-retrieve-passwords-from-a-database
-# https://stackoverflow.com/questions/489861/locking-a-file-in-python
-

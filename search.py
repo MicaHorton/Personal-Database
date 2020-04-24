@@ -1,7 +1,7 @@
 # Note: Has to be run from Code folder
 
-# Decrypt Files btw
-
+# Decrypt files
+import decrypt # removing the .py fixed the error, but I don't know why?
 
 # Create/open index
 import os.path
@@ -10,8 +10,8 @@ from whoosh import index
 
 schema = Schema(content=TEXT, path=ID(stored=True), tags=KEYWORD(scorable=True))
 
-os.chdir('..')
 #print(os.getcwd())
+homeDir = os.path.realpath(__file__).replace('Code/search.py','')
 if not os.path.exists('Index'):
     os.mkdir('Index')
     ix = index.create_in("Index", schema)
@@ -21,7 +21,7 @@ else:
 
 # Add new files to index
 import json
-database = '/Users/mica/Projects/PDB/dataBase.json'
+database = os.path.realpath(__file__).replace('Code/search.py','database.json')
 writer = ix.writer()
 
 with open(database,'r') as f:
@@ -43,8 +43,6 @@ with open(database, 'w') as f:
     json.dump(data, f, indent=2)
 
 writer.commit()
-
-
 
 # Alow user to search
 from whoosh.qparser import QueryParser
@@ -70,8 +68,11 @@ with ix.searcher() as searcher:
         prCyan(hit['path'])
         
 
-        
-        #print('{fragment:100}{path:10}'.format(fragment=fragment, path=hit['path']))
-
 
         
+    # Fix .os thing
+    # Fix 'indexed' key errors
+    # Create bash alias file
+    # Add sort tag
+    # 
+
