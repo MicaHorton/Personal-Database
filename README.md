@@ -15,12 +15,14 @@ cd('..')
 mkdir('PDB')
 ```
 This will create a file structure like this:
-PDB
-    Code
-    Files
-    database.json
+- PDB
+  - Code
+  - Files
+  - database.json
 
-The code is kept in a seperate folder from "Files" and "database.json" to make difficult to acidentally upload those to Github by accident since those are used to store your thoughts. 
+
+
+The code is kept in a seperate folder from "Files" and "database.json" to make difficult to acidentally upload those to Github since those are used to store your thoughts. 
 
 If you want to be able to access the scripts directly from the command line, 
 1) Edit the "pdb" files to reflect the location of the scripts.
