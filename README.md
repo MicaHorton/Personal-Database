@@ -1,13 +1,15 @@
 # Personal Database
-Python files that allows you to store your thoughts safetly and search them.
+A collection of python scripts that allow you to store your thoughts safetly and search them.
 
-- Flexible: The add tags options allows you to create lists on demand.
+- Flexible: The add tags options allows you to create lists on demand. Customize this code however you please.
 - Safe from Snoops: The code will encrypt your entries by generating a hash based off a string password. The hash is then used to encrypt your entries using Fernet encryption.
-- Easy to Access: Copy and paste this into your .bashprofile to be able to easily access entries.
-- Searchable: Uses the python whoosh library to efficiently organize your thoughts
+- Easy to Access: Add the pdb file to your .bashrc file to run the different commands from the command line
+- Searchable: Uses the python whoosh library to efficiently search your thoughts
 
-# Installation Guide
+## How It Works
+- Run the input.py script (or pdb input if you have the .bashrc file setup) to add a thought. This will open the nano (which can easily be changed to vim) and create an automatically timestampped file. This file be saved in a '
 
+## How To Install
 ```
 mkdir('Code')
 git clone https://github.com/MicaHorton/Personal-Database.git Code
@@ -19,7 +21,6 @@ This will create a file structure like this:
   - Code
   - Files
   - database.json
-
 
 
 The code is kept in a seperate folder from "Files" and "database.json" to make difficult to acidentally upload those to Github since those are used to store your thoughts. 

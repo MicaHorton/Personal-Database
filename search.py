@@ -70,8 +70,5 @@ with ix.searcher() as searcher:
 
 
         
-    # Fix .os thing >
-    # Create bash alias file
-    # Add sort tag
-    # 
+
 
