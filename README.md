@@ -3,7 +3,7 @@ A collection of python scripts that allow you to store your thoughts safetly and
 
 - Flexible: The add tags options allows you to create lists on demand. Customize this code however you please.
 - Safe from Snoops: The code will encrypt your entries by generating a hash based off a string password. The hash is then used to encrypt your entries using Fernet encryption.
-- Easy to Access: Add the pdb file to your .bashrc file to run the different commands from the command line
+- Easy to Access: Add the pdb file to your .bashrc file to run the different commands from the terminal
 - Searchable: Uses the python whoosh library to efficiently search your thoughts
 
 ## How It Works
