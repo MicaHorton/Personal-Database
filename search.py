@@ -70,7 +70,7 @@ with ix.searcher() as searcher:
 
 
         
-    # Fix .os thing
+    # Fix .os thing >
     # Fix 'indexed' key errors
     # Create bash alias file
     # Add sort tag

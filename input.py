@@ -26,7 +26,8 @@ filePath = '/Users/mica/Projects/PDB/Files/' + fileName
 newInstance = {
     'file': filePath,
     'timestamp': timestamp,
-    'tags': tags
+    'tags': tags,
+    'indexed': False
 }
 
 database = os.path.realpath(__file__).replace('Code/input.py','database.json')
