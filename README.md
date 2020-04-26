@@ -22,7 +22,27 @@ PDB
 
 The code is kept in a seperate folder from "Files" and "database.json" to make difficult to acidentally upload those to Github by accident since those are used to store your thoughts. 
 
-
+If you want to be able to access the scripts directly from the command line, 
+1) Edit the "pdb" files to reflect the location of the scripts.
+```
+#!/bin/zsh 
+# ^^ change to /bash if using a bash shell
+case $1 in 
+	input)
+		python3 /Users/mica/Projects/PDB/Code/input.py # Replace with file path on your computer
+		;; 
+	search)
+		python3 /Users/mica/Projects/PDB/Code/search.py
+		;;
+	sort)
+		python3 /Users/mica/Projects/PDB/Code/sort.py
+esac
+```
+2) Add the path to pdb to your .zshrc (or .bashrc) file
+```
+echo 'export PATH=$PATH:/Users/mica/Projects/PDB/Code/pdb' >> ~/.zshrc
+source ~/.zshrc
+```
 
 # Resources
 https://stackoverflow.com/questions/2572099/pythons-safest-method-to-store-and-retrieve-passwords-from-a-database

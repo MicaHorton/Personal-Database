@@ -1,0 +1,14 @@
+#!/bin/zsh 
+# ^^ change to /bash if using a bash shell
+case $1 in 
+	input)
+		python3 /Users/mica/Projects/PDB/Code/input.py # Replace with file path on your computer
+		;; 
+	search)
+		python3 /Users/mica/Projects/PDB/Code/search.py
+		;;
+	sort)
+		python3 /Users/mica/Projects/PDB/Code/sort.py
+esac
+
+#
